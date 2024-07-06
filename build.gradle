@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'com.gradle.plugin-publish' version '1.2.1'
+
+}
+
+group = 'org.metalib.gradle.plugin.gcloud.secret'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+gradlePlugin {
+    website = 'https://github.com/org-metalib/gcloud-secret-gradle-plugin'
+    vcsUrl = 'https://github.com/org-metalib/gcloud-secret-gradle-plugin'
+    plugins {
+        gcpSecret {
+            id = 'org.metalib.gradle.plugin.gcloud.secret'
+            implementationClass = 'org.metalib.gradle.plugin.gcloud.secret.GoogleCloudSecretPlugin'
+            displayName = 'Metalib GCP Secret Gradle plugin'
+            description = 'Gradle plugin to manage secrets in Google Cloud!'
+            tags.set(['gcloud', 'GCP', 'secrets', 'metalib'])
+        }
+    }
+}
