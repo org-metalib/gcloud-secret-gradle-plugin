@@ -10,10 +10,10 @@ plugins {
 
 ## Configuring the plugin
 ```groovy
-metalibGloudSecret {
+gcloudSecrets {
     gcloudProjectName = "<google cloud project name>"
     gcloudSecretDir = "<relative or absolute directory to host secrets>"
-    gcloudSecrets = []
+    gcloudSecrets = [] 
 }
 ```
 
