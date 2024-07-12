@@ -4,7 +4,7 @@
 
 ```groovy
 plugins {
-    id 'org.metalib.gradle.plugin.gcloud.secret' version '0.0.3'
+    id 'org.metalib.gradle.plugin.gcloud.secret' version '0.0.4'
 }
 ```
 
